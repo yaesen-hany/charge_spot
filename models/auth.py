@@ -2,7 +2,7 @@ import os
 import json
 import re
 import hashlib
-from models.models import Driver, User, Operator, Admin
+from models import Driver, User, Operator, Admin
 import models
 from exceptions import (
     ValidationError,
