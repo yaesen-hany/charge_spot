@@ -1,0 +1,115 @@
+[
+    {
+        "user_id": 1,
+        "name": "Yaseen Hany",
+        "email": "admin@chargespot.com",
+        "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+        "phone": "01012345678",
+        "city": "Sadat City",
+        "role": "admin"
+    },
+    {
+        "user_id": 2,
+        "name": "Ahmed Hassan",
+        "email": "cairo.op@chargespot.com",
+        "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "phone": "01123456789",
+        "city": "Cairo",
+        "role": "operator",
+        "station_id": "ST-01"
+    },
+    {
+        "user_id": 3,
+        "name": "Sara Adel",
+        "email": "giza.op@chargespot.com",
+        "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "phone": "01234567890",
+        "city": "Giza",
+        "role": "operator",
+        "station_id": "ST-02"
+    },
+    {
+        "user_id": 4,
+        "name": "Omar Khaled",
+        "email": "omar.khaled@gmail.com",
+        "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "phone": "01512345678",
+        "city": "Alexandria",
+        "role": "driver",
+        "plate_number": "ABC-1234",
+        "vehicle_model": "Tesla Model 3",
+        "battery_capacity_kwh": 60.0
+    },
+    {
+        "user_id": 5,
+        "name": "Mona Tarek",
+        "email": "mona.tarek@gmail.com",
+        "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "phone": "01098765432",
+        "city": "Cairo",
+        "role": "driver",
+        "plate_number": "XYZ-567",
+        "vehicle_model": "BYD Dolphin",
+        "battery_capacity_kwh": 44.9
+    },
+    {
+        "user_id": 6,
+        "name": "Karim Nabil",
+        "email": "karim.nabil@gmail.com",
+        "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "phone": "01055556666",
+        "city": "Tanta",
+        "role": "driver",
+        "plate_number": "EVG-9081",
+        "vehicle_model": "Volkswagen ID.4",
+        "battery_capacity_kwh": 77.0
+    },
+    {
+        "user_id": 7,
+        "name": "ibrahim",
+        "email": "ibrahim@gmail.com",
+        "phone": "01000000000",
+        "password": "46d57c758503c8e94176c43a772266072dc39e1685c4ca63e54d4cd13144b25d",
+        "city": "fayoum",
+        "role": "driver",
+        "plate_number": "kbd",
+        "vehicle_model": "lnrnlr",
+        "battery_capacity_kwh": 60.0
+    },
+    {
+        "user_id": 8,
+        "name": "ibrahim",
+        "email": "ibrahim@outlook.com",
+        "phone": "01000000000",
+        "password": "b8249090b5eb10deaf4724a41c6be8aee63d5f45b1a674d32a058773e7456065",
+        "city": "fayoum",
+        "role": "driver",
+        "plate_number": "KBD-2000",
+        "vehicle_model": "mazda",
+        "battery_capacity_kwh": 60.0
+    },
+    {
+        "user_id": 9,
+        "name": "othman",
+        "email": "othaman@gmail.com",
+        "phone": "01500000000",
+        "password": "315da83e985c08c48c5f32a9ac66bb8aa9837043ef36dd199e2e53129550b203",
+        "city": "fayoum",
+        "role": "driver",
+        "plate_number": "ABC-888",
+        "vehicle_model": "BYD",
+        "battery_capacity_kwh": 60.0
+    },
+    {
+        "user_id": 10,
+        "name": "youseef",
+        "email": "youseef@gmail.com",
+        "phone": "01200000000",
+        "password": "315da83e985c08c48c5f32a9ac66bb8aa9837043ef36dd199e2e53129550b203",
+        "city": "Cairo",
+        "role": "driver",
+        "plate_number": "ABC-892",
+        "vehicle_model": "mazda",
+        "battery_capacity_kwh": 60.0
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "booking_code": "CS-000001",
+        "driver_plate": "ABC-1234",
+        "station_id": "ST-01",
+        "slot_id": "SL-0102",
+        "requested_time": "08:00",
+        "energy_kwh": 35.0,
+        "status": "confirmed",
+        "date_time": "2026-10-14 09:15:00"
+    },
+    {
+        "booking_code": "CS-000002",
+        "driver_plate": "XYZ-567",
+        "station_id": "ST-03",
+        "slot_id": "SL-0303",
+        "requested_time": "12:00",
+        "energy_kwh": 20.0,
+        "status": "confirmed",
+        "date_time": "2026-10-14 11:30:00"
+    },
+    {
+        "booking_code": "CS-000003",
+        "driver_plate": "EVG-9081",
+        "station_id": "ST-02",
+        "slot_id": "SL-0201",
+        "requested_time": "07:00",
+        "energy_kwh": 45.0,
+        "status": "pending",
+        "date_time": "2026-10-15 07:00:00"
+    },
+    {
+        "booking_code": "CS-000004",
+        "driver_plate": "ABC-1234",
+        "station_id": "ST-05",
+        "slot_id": "SL-0501",
+        "requested_time": "06:00",
+        "energy_kwh": 50.0,
+        "status": "completed",
+        "date_time": "2026-10-13 06:05:00"
+    },
+    {
+        "booking_code": "CS-000005",
+        "driver_plate": "XYZ-567",
+        "station_id": "ST-06",
+        "slot_id": "SL-0601",
+        "requested_time": "08:00",
+        "energy_kwh": 30.0,
+        "status": "completed",
+        "date_time": "2026-10-12 08:10:00"
+    }
+]
