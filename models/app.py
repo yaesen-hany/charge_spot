@@ -18,7 +18,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 # ── Domain imports ──────────────────────────────────────────────────
-from models import (
+from models.models import (
     User, Driver, Operator, Admin,
     ChargingSlot, ChargingStation, BookingRequest,
 )
