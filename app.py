@@ -147,6 +147,7 @@ def next_booking_code() -> str:
 # SESSION-STATE INITIALIZATION & PERSISTENCE
 # ════════════════════════════════════════════════════════════════════
 def init_session():
+
     defaults = {
         "initialized": False,
         "current_user": None,
@@ -516,6 +517,7 @@ EGYPT_CITY_COORDINATES = {
     "south sinai": (27.9158, 34.3299),
     "suez": (29.9668, 32.5498),
 }
+@st.cache_data
 def _calculate_distance_km(lat1, lon1, lat2, lon2) -> float:
     try:
         lat1, lon1, lat2, lon2 = float(lat1), float(lon1), float(lat2), float(lon2)
@@ -970,6 +972,7 @@ def render_register():
                 st.error(f"Validation Error: {exc}")
             except Exception as exc:
                 st.error(f"Registration Error: {exc}")
+@st.fragment
 def render_interactive_pins_map(stations_list, height=480, map_key=None):
     """Render interactive map with sharp pins, status colors, clustering, and rich popups."""
     if not stations_list:
@@ -1050,6 +1053,7 @@ def render_interactive_pins_map(stations_list, height=480, map_key=None):
 # ════════════════════════════════════════════════════════════════════
 # STATE 2 – PUBLIC SCREENS: GUEST MAP
 # ════════════════════════════════════════════════════════════════════
+
 def render_guest_map():
     if st.button("Return to Home"):
         navigate("landing", rerun=True)
@@ -1156,6 +1160,7 @@ def render_driver_dashboard():
         _driver_stations_map(user)
     elif page == "Driver AI Assistant":
         _driver_ai_assistant(user)
+@st.fragment
 def _driver_find_and_book(user: Driver):
     st.subheader("Find & Book a Charging Slot")
     stations = _get_active_stations()
@@ -1299,6 +1304,7 @@ def _driver_find_and_book(user: Driver):
             st.rerun()
         except (ValidationError, SlotAlreadyBookedError) as exc:
             st.error(f"Booking failed: {exc}")
+@st.fragment
 def _driver_my_bookings(user: Driver):
     st.subheader("My Bookings")
 
@@ -1383,6 +1389,7 @@ def _driver_my_bookings(user: Driver):
             _undo_last_action()
     else:
         st.info("You have no bookings recorded. Visit the 'Find & Book' tab to schedule a session.")
+
 def _driver_stations_map(user: Driver):
     st.subheader("Stations Map — Pathway to Booking")
     stations = _get_active_stations()
@@ -1705,6 +1712,7 @@ def _operator_queue_scheduler(station: ChargingStation):
                 save_stations()
                 st.success(f"Greedy Scheduler assigned {len(scheduled)} vehicle(s). Remaining in queue: {len(failed)}")
                 st.rerun()
+@st.fragment
 def _operator_bookings_lookup(station: ChargingStation):
     st.subheader("Bookings Lookup & Sorting Engine")
 
@@ -1833,6 +1841,7 @@ def _get_station_analytics_dataset(station: ChargingStation) -> pd.DataFrame:
             "status": status,
         })
     return pd.DataFrame(records)
+@st.fragment
 def _operator_analytics(station: ChargingStation):
     st.subheader(f"Station Analytics — {station.name}")
     st.caption(f"Station ID: `{station.station_id}` | Location: **{station.area}** | Configured Slots: **{len(station.slots)}** | Status: **Operational**")
@@ -2338,6 +2347,7 @@ def _admin_station_management():
             "Free Slots": _count_free_slots(s),
         })
     st.dataframe(pd.DataFrame(stn_rows), use_container_width=True, hide_index=True)
+@st.fragment
 def _admin_analytics():
     st.subheader("Global Analytics, Reports & AI-Use Log")
 
