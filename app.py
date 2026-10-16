@@ -412,7 +412,10 @@ def complete_booking_session(booking_code: str) -> bool:
 # GEMINI AI & LOCAL GROUNDED CHATBOT ENGINES
 # ════════════════════════════════════════════════════════════════════
 def _is_gemini_available() -> bool:
-    api_key = st.secrets.get("GEMINI_API_KEY", "")
+    try:
+        api_key = st.secrets.get("GEMINI_API_KEY", "")
+    except Exception:
+        api_key = ""
     return bool(api_key and api_key != "YOUR_API_KEY_HERE")
 def _get_gemini_response(prompt: str, system_instruction: str) -> str | None:
     api_key = st.secrets.get("GEMINI_API_KEY", "")
