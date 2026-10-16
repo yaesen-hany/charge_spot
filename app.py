@@ -762,13 +762,12 @@ def apply_theme():
 # ════════════════════════════════════════════════════════════════════
 def render_landing():
     left_col, right_col = st.columns([6, 5])
-
+    text_color="#000000"
     with left_col:
-        st.caption("ChargeSpot Egypt · National EV Infrastructure")
-        st.title("ChargeSpot Egypt")
+        st.title(":green[ChargeSpot Egypt]")
         st.write(
-            "An intelligent EV charging station, booking, waiting list, and time slot management platform. "
-            "Optimizing station utilization, eliminating driver wait times, and advancing clean energy mobility in Egypt."
+            ":{text_color}[An intelligent EV charging station, booking, waiting list, and time slot management platform. "
+            "Optimizing station utilization, eliminating driver wait times, and advancing clean energy mobility in Egypt.]"
         )
 
         # Explore Stations Map Button
