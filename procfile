@@ -1,0 +1,1 @@
+mkdir -p .streamlit && cp /etc/secrets/secrets.toml .streamlit/secrets.toml && cp /etc/secrets/config.toml .streamlit/config.toml && streamlit run app.py --server.port $PORT --server.address 0.0.0.0
